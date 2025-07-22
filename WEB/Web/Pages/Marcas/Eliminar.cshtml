@@ -1,0 +1,39 @@
+﻿@page
+@model Web.Pages.Marcas.EliminarModel
+@{
+}
+<h1>Eliminar Marca</h1>
+
+<div class="container">
+	<form method="post">
+		<div class="col-md-8">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">@Html.DisplayFor(modelo => modelo.marca.Marca) @Html.DisplayFor(modelo => modelo.marca.Modelo)</h5>
+					<p class="card-text">
+						<div>
+							<b>@Html.DisplayNameFor(modelo => modelo.marca.Placa)</b>
+							@Html.DisplayFor(modelo => modelo.marca.Placa)
+						</div>
+						<div>
+							<b>@Html.DisplayNameFor(modelo => modelo.marca.Anio)</b>
+							@Html.DisplayFor(modelo => modelo.marca.Anio)
+						</div>
+						<div>
+							<b>@Html.DisplayNameFor(modelo => modelo.marca.Precio)</b>
+							@Html.DisplayFor(modelo => modelo.marca.Precio)
+						</div>
+					</p>
+					<p class="card-text">
+						<small class="text-muted">
+							@Html.DisplayFor(modelo => modelo.marca.CorreoPropietario) |
+							@Html.DisplayFor(modelo => modelo.marca.TelefonoPropietario)
+						</small>
+					</p>
+				</div>
+			</div>
+		</div>
+		<a type="button" class="btn btn-primary" asp-page="./Index">Regresar</a>
+		<button type="submit" class="btn btn-danger">Eliminar</button>
+	</form>
+</div>
